@@ -1,4 +1,4 @@
-"""Shared fixtures for starloom v2 tests."""
+"""Shared fixtures for starloom v1 tests."""
 
 from __future__ import annotations
 

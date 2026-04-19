@@ -29,31 +29,61 @@ Starlark gives you a real, hermetic scripting language — conditionals, loops, 
 
 Requires Python 3.11+ and the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) (`claude`) on `$PATH`.
 
+**With [`uv`](https://docs.astral.sh/uv/) (recommended)** — installs `starloom` as a standalone tool on `$PATH`:
+
 ```bash
-git clone https://github.com/<your-fork>/starloom.git
-cd starloom
-pip install -e .
+uv tool install git+https://github.com/toadharvard/starloom.git
 ```
 
-Or with [`uv`](https://docs.astral.sh/uv/):
+**With `pip`**:
 
 ```bash
-uv pip install -e .
+pip install git+https://github.com/toadharvard/starloom.git
+```
+
+**From a clone** (if you want the `examples/` directory locally):
+
+```bash
+git clone https://github.com/toadharvard/starloom.git
+cd starloom
+uv pip install -e .        # or: pip install -e .
 ```
 
 Verify:
 
 ```bash
 starloom --help
-starloom session create examples/hello.star
 ```
 
-Shell completions:
+---
+
+## Shell completions
+
+Pick your shell and add the one-liner to your shell's rc file:
 
 ```bash
-starloom completions fish | source          # fish
-eval "$(_STARLOOM_COMPLETE=zsh_source starloom)"   # zsh
-eval "$(_STARLOOM_COMPLETE=bash_source starloom)"  # bash
+# bash — append to ~/.bashrc
+eval "$(_STARLOOM_COMPLETE=bash_source starloom)"
+```
+
+```zsh
+# zsh — append to ~/.zshrc
+eval "$(_STARLOOM_COMPLETE=zsh_source starloom)"
+```
+
+```fish
+# fish — append to ~/.config/fish/config.fish
+_STARLOOM_COMPLETE=fish_source starloom | source
+```
+
+Run `starloom completions {bash|zsh|fish}` to re-print the snippet for your shell.
+
+For faster shell startup, generate the script once and source it:
+
+```bash
+_STARLOOM_COMPLETE=zsh_source starloom > ~/.starloom-complete.zsh
+# then in ~/.zshrc:
+source ~/.starloom-complete.zsh
 ```
 
 ---
@@ -65,13 +95,15 @@ The repo ships a Claude Code plugin (`claude-plugin/`) with two skills:
 - **starloom-cli-operator** — drives `starloom` from inside Claude Code: creates sessions, attaches, patches nodes, resolves checkpoints.
 - **starloom-workflow-implementer** — writes clean `.star` files from an already-approved architecture.
 
-Install by symlinking the plugin into your Claude Code plugins directory:
+Clone the repo and symlink the plugin into Claude Code's plugins directory:
 
 ```bash
-ln -s "$(pwd)/claude-plugin" ~/.claude/plugins/starloom
+git clone https://github.com/toadharvard/starloom.git
+mkdir -p ~/.claude/plugins
+ln -s "$(pwd)/starloom/claude-plugin" ~/.claude/plugins/starloom
 ```
 
-Then restart Claude Code. The skills become available automatically when the model detects a matching task.
+Restart Claude Code. The skills become available automatically when the model detects a matching task.
 
 ---
 
@@ -136,6 +168,8 @@ explicit argument → `$STARLOOM_SESSION` → last-used session.
 ## Development
 
 ```bash
+git clone https://github.com/toadharvard/starloom.git
+cd starloom
 uv pip install -e '.[dev]'
 uv pip install --group dev
 
