@@ -19,7 +19,7 @@ Primary skill:
 Supporting skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 
 Read these exact files:
 - {source_skill_path}
@@ -58,7 +58,7 @@ EXTRACT_DOCTRINE_PROMPT = """Extract shared doctrine for split workflow
 Primary skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 
 Input analysis:
 {source_analysis}
@@ -106,7 +106,7 @@ Primary skill:
 Supporting skill:
 - starloom-dod-designer
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 
 Source analysis:
 {source_analysis}
@@ -155,7 +155,7 @@ Primary skill:
 Supporting skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 Use Bash and Write.
 
 Write outputs under these exact paths:
@@ -211,7 +211,7 @@ Primary skill:
 Supporting skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 
 Source analysis:
 {source_analysis}
@@ -264,7 +264,7 @@ Primary skill:
 Supporting skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 Use Bash and Write.
 
 Use these inputs:
@@ -298,7 +298,7 @@ Primary skill:
 Supporting skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 
 Doctrine artifact:
 {doctrine}
@@ -413,7 +413,7 @@ Primary skill:
 Supporting skill:
 - starloom-workflow-author
 
-Work in ~/ws/starloom2.
+Work in the current repository.
 
 Task:
 Review the proposed split plan below only for obvious architectural mismatch with the current task.

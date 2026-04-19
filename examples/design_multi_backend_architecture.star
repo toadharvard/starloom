@@ -1,6 +1,6 @@
 """Design a clean multi-backend architecture migration for Starloom."""
 
-REPO_ROOT = "~/ws/starloom2"
+REPO_ROOT = "."
 OUTPUT_PATH = "/tmp/starloom_multi_backend_architecture_report.txt"
 MODEL = "codex-lb/gpt-5.4"
 FLAGS = "--model %s --thinking xhigh --tools bash,read,grep" % MODEL

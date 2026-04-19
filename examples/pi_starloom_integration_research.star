@@ -1,7 +1,7 @@
 """Research pi plugin/package integration options for Starloom."""
 
 PROMPT = """RESEARCH pi extension/package integration options for Starloom.
-You are an implementation-focused pi extension architect working in ~/ws/starloom2.
+You are an implementation-focused pi extension architect working in the current repository.
 
 Mission:
 Figure out how far we can push pi to integrate with Starloom in a practical way.

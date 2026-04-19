@@ -1,6 +1,6 @@
-"""3 rounds of 5 parallel Codex reviewers find clean code violations in starloom2."""
+"""3 rounds of 5 parallel Codex reviewers find clean code violations in starloom."""
 
-SHARED_CONTEXT = """You review ~/ws/starloom2 — a Starlark workflow orchestrator (54 files, ~7200 LOC).
+SHARED_CONTEXT = """You review the current repository — a Starlark workflow orchestrator.
 
 Layers (deps flow DOWN): CLI -> UI -> Session -> Orchestrator -> Runtime -> Foundation
 Packages: types.py, checkpoint.py, events.py, event_data.py, server.py, client.py, hooks.py,
@@ -12,8 +12,8 @@ trace graph + replayed event history + backend-specific raw flags.
 
 TOOLS: Use Bash to inspect the repo, and also Read/Grep/Glob.
 Examples:
-- find ~/ws/starloom2 -name '*.py' | sort
-- rg -n 'class SessionServer|def execute\\(' ~/ws/starloom2
+- find . -name '*.py' | sort
+- rg -n 'class SessionServer|def execute\\(' .
 
 SHARED FINDINGS FILE: /tmp/starloom_review_findings.txt
 - BEFORE you start, read this file if it exists.

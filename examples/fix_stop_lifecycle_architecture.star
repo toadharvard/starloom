@@ -2,7 +2,7 @@
 # No top-level loops. Bounded remediation rounds are unrolled explicitly.
 
 MODEL = "codex-lb/gpt-5.4"
-ROOT = "~/ws/starloom2"
+ROOT = "."
 FINAL_REPORT = "/tmp/stopflow_final_report.txt"
 
 

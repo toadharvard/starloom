@@ -1,6 +1,6 @@
 """Plan, rewrite, verify, and automatically retry until naming inconsistencies and stale leftovers are removed."""
 
-REPO_ROOT = "~/ws/starloom2"
+REPO_ROOT = "."
 MODEL = "codex-lb/gpt-5.4"
 
 FINDINGS_PATH = "/tmp/starloom_legacy_findings.txt"

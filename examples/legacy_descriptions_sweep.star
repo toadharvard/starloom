@@ -1,6 +1,6 @@
 """Parallel naming-consistency sweep over the repo with shared findings and term glossary."""
 
-REPO_ROOT = "~/ws/starloom2"
+REPO_ROOT = "."
 MODEL = "codex-lb/gpt-5.4"
 
 FINDINGS_PATH = "/tmp/starloom_legacy_findings.txt"

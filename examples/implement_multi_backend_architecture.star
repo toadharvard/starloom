@@ -1,6 +1,6 @@
 """Implement honest multi-backend execution architecture for Starloom."""
 
-REPO_ROOT = "~/ws/starloom2"
+REPO_ROOT = "."
 MODEL = "codex-lb/gpt-5.4"
 FLAGS = "--model %s --thinking xhigh --tools bash,read,grep" % MODEL
 IMPLEMENTER_FLAGS = "--model %s --thinking xhigh --tools bash,read,edit,write,grep" % MODEL

@@ -13,7 +13,7 @@ This workflow is intentionally design-focused and read-only.
 """
 
 MODEL = "opus"
-ROOT = "~/ws/starloom2"
+ROOT = "."
 REPORT_PATH = "/tmp/stop_lifecycle_claude_opus_report.txt"
 
 FILES = """

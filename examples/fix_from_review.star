@@ -12,7 +12,7 @@ IMPLEMENTER_FLAGS = "--model %s --thinking xhigh --tools bash,read,grep,glob,edi
 INTEGRATOR_FLAGS = "--model %s --thinking xhigh --tools bash,read,grep,glob,edit,write" % MODEL
 VERIFIER_FLAGS = "--model %s --thinking xhigh --tools bash,read,grep,glob" % MODEL
 
-SHARED_REPO_CONTEXT = """You are working in ~/ws/starloom2.
+SHARED_REPO_CONTEXT = """You are working in the current repository.
 
 Project goal:
 - Keep the codebase clean, readable, layered, and semantically coherent.

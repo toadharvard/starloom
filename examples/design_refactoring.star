@@ -1,7 +1,7 @@
 """Architect reviews general architecture problems and proposes fix plans."""
 
 PROMPT = """REVIEW general architecture problems and propose fixes.
-You are a software architect reviewing ~/ws/starloom2.
+You are a software architect reviewing the current repository.
 
 Repository context:
 - Starlark workflow orchestrator
