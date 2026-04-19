@@ -1,0 +1,38 @@
+[project]
+name = "starloom"
+version = "2.0.0"
+description = "Starlark workflow orchestrator for AI agents"
+requires-python = ">=3.11"
+dependencies = [
+    "starlark-go>=1.0.1",
+    "click",
+    "rich",
+    "aiohttp",
+    "tiktoken",
+]
+
+[project.scripts]
+starloom = "starloom.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.mypy]
+strict = true
+
+[dependency-groups]
+dev = [
+    "mypy>=1.20.1",
+    "ruff>=0.15.10",
+    "pre-commit>=4.5.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
